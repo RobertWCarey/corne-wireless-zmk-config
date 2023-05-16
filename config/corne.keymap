@@ -10,9 +10,9 @@
 
 / {
     behaviors {
-        semicolon_home: semicolon_home {
+        kp_kp_200: kp_kp_200 {
             compatible = "zmk,behavior-hold-tap";
-            label = "SEMICOLON_HOME";
+            label = "KP_KP_200";
             bindings =
                 <&kp>,
                 <&kp>;
@@ -29,6 +29,16 @@
                 <&kp RSHFT>,
                 <&kp RCTRL>;
         };
+        mo_kp_200: mo_kp_200 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MO_KP_200";
+            bindings =
+                <&mo>,
+                <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     keymap {
@@ -42,10 +52,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-   &kp TAB  &kp Q  &kp W     &kp E  &kp R      &kp T      &kp Y  &kp U      &kp I    &kp O                           &kp P              &kp BSPC
-&kp LSHIFT  &kp A  &kp S     &kp D  &kp F      &kp G      &kp H  &kp J      &kp K    &kp L  &semicolon_home HOME SEMICOLON               &kp SQT
- &kp LCTRL  &kp Z  &kp X     &kp C  &kp V      &kp B      &kp N  &kp M  &kp COMMA  &kp DOT                        &kp FSLH  &shift_ctrl_tapdance
-                          &kp LGUI  &mo 2  &kp SPACE    &kp RET  &mo 1   &kp RALT
+   &kp TAB  &kp Q  &kp W     &kp E      &kp R             &kp T                     &kp Y      &kp U      &kp I    &kp O                      &kp P              &kp BSPC
+&kp LSHIFT  &kp A  &kp S     &kp D      &kp F             &kp G                     &kp H      &kp J      &kp K    &kp L  &kp_kp_200 SEMICOLON HOME               &kp SQT
+ &kp LCTRL  &kp Z  &kp X     &kp C      &kp V             &kp B                     &kp N      &kp M  &kp COMMA  &kp DOT                   &kp FSLH  &shift_ctrl_tapdance
+                          &kp LGUI  &kp SPACE  &mo_kp_200 2 TAB    &mo_kp_200 1 BACKSPACE  &kp ENTER   &kp RALT
             >;
         };
 
@@ -60,7 +70,7 @@
    &kp TAB        &kp N1        &kp N2        &kp N3        &kp N4        &kp N5      &kp N6    &kp N7    &kp N8     &kp N9  &kp N0  &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN    &kp UP  &kp RIGHT  &trans    &trans
  &kp LSHFT        &trans        &trans        &trans        &trans        &trans      &trans    &trans    &trans     &trans  &trans    &trans
-                                            &kp LGUI        &trans     &kp SPACE     &kp RET    &trans  &kp RALT
+                                            &kp LGUI        &trans        &trans      &trans    &trans  &kp RALT
             >;
         };
 
@@ -75,7 +85,7 @@
   &kp TAB  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET   &kp AMPS  &kp ASTERISK  &kp LPAR  &kp RPAR   &kp BSPC
   &kp ESC    &trans  &trans    &trans    &trans     &trans    &kp MINUS  &kp EQUAL      &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
 &kp LSHFT    &trans  &trans    &trans    &trans     &trans    &kp UNDER   &kp PLUS      &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI    &trans  &kp SPACE      &kp RET     &trans      &kp RALT
+                             &kp LGUI    &trans     &trans       &trans     &trans      &kp RALT
             >;
         };
     };
