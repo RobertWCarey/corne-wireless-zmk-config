@@ -39,6 +39,14 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+        layer_alt_tapdance: layer_alt_tapdance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYER_ALT_TAPDANCE";
+            #binding-cells = <0>;
+            bindings =
+                <&mo 2>,
+                <&kp LEFT_ALT>;
+        };
     };
 
     keymap {
@@ -52,10 +60,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W     &kp E         &kp R        &kp T                 &kp Y          &kp U      &kp I    &kp O          &kp P   &kp_kp_200 HOME END
-&kp LSHIFT  &kp A  &kp S     &kp D         &kp F        &kp G                 &kp H          &kp J      &kp K    &kp L  &kp SEMICOLON      &kp SINGLE_QUOTE
- &kp LCTRL  &kp Z  &kp X     &kp C         &kp V        &kp B                 &kp N          &kp M  &kp COMMA  &kp DOT       &kp FSLH  &shift_ctrl_tapdance
-                          &kp LGUI  &kp LEFT_ALT  &lt 2 SPACE    &mo_kp_200 1 ENTER  &kp BACKSPACE    &kp TAB
+&kp ESCAPE  &kp Q  &kp W     &kp E                &kp R      &kp T                 &kp Y          &kp U      &kp I    &kp O          &kp P   &kp_kp_200 HOME END
+&kp LSHIFT  &kp A  &kp S     &kp D                &kp F      &kp G                 &kp H          &kp J      &kp K    &kp L  &kp SEMICOLON      &kp SINGLE_QUOTE
+ &kp LCTRL  &kp Z  &kp X     &kp C                &kp V      &kp B                 &kp N          &kp M  &kp COMMA  &kp DOT       &kp FSLH  &shift_ctrl_tapdance
+                          &kp LGUI  &layer_alt_tapdance  &kp SPACE    &mo_kp_200 1 ENTER  &kp BACKSPACE    &kp TAB
             >;
         };
 
