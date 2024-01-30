@@ -19,12 +19,14 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
         shift_ctrl_tapdance: shift_ctrl_tapdance {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CTRL_TAPDANCE";
             #binding-cells = <0>;
             bindings = <&kp RSHFT>, <&kp RCTRL>;
         };
+
         mo_kp_200: mo_kp_200 {
             compatible = "zmk,behavior-hold-tap";
             label = "MO_KP_200";
@@ -34,12 +36,14 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
         layer_alt_tapdance: layer_alt_tapdance {
             compatible = "zmk,behavior-tap-dance";
             label = "LAYER_ALT_TAPDANCE";
             #binding-cells = <0>;
             bindings = <&mo 2>, <&kp LEFT_ALT>;
         };
+
         shift_capsword_tapdance: shift_capsword_tapdance {
             compatible = "zmk,behavior-tap-dance";
             label = "SHIFT_CAPSWORD_TAPDANCE";
@@ -59,10 +63,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E     &kp R                &kp T        &kp Y               &kp U          &kp I      &kp O    &kp P          &kp_kp_200 HOME END
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F                &kp G        &kp H               &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
-&kp LCTRL   &kp Z  &kp X  &kp C     &kp V                &kp B        &kp N               &kp M          &kp COMMA  &kp DOT  &kp FSLH       &shift_capsword_tapdance
-                          &kp LGUI  &layer_alt_tapdance  &kp SPACE    &mo_kp_200 1 ENTER  &kp BACKSPACE  &kp TAB
+&kp LA(ESCAPE)  &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y        &kp U          &kp I      &kp O    &kp P          &kp_kp_200 HOME END
+&kp LSHIFT      &kp A  &kp S  &kp D     &kp F  &kp G        &kp H        &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LCTRL       &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N        &kp M          &kp COMMA  &kp DOT  &kp FSLH       &shift_capsword_tapdance
+                              &kp LGUI  &mo 2  &kp SPACE    &lt 1 ENTER  &kp BACKSPACE  &kp TAB
             >;
         };
 
@@ -74,10 +78,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1  &kp N2      &kp N3      &kp N4           &kp N5               &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp DEL
-&trans  &trans  &trans      &trans      &kp PRINTSCREEN  &kp C_VOLUME_UP      &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&trans  &trans  &bt BT_PRV  &bt BT_NXT  &trans           &kp C_VOLUME_DOWN    &trans    &trans    &trans    &trans     &trans  &trans
-                            &kp LGUI    &trans           &trans               &trans    &trans    &kp RALT
+&trans  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp N9        &bt BT_NXT         &trans    &trans    &trans    &trans     &trans  &kp DEL
+&trans  &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &bt BT_PRV         &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PRINTSCREEN    &trans    &trans    &trans    &trans     &trans  &trans
+                                    &kp LGUI      &trans        &trans             &trans    &trans    &kp RALT
             >;
         };
 
