@@ -63,7 +63,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mt LEFT_ALT ESCAPE  &kp Q  &kp W  &kp E     &kp R      &kp T    &kp Y        &kp U          &kp I      &kp O    &kp P          &kp_kp_200 HOME END
+&mt LEFT_ALT ESCAPE  &kp Q  &kp W  &kp E     &kp R      &kp T    &kp Y        &kp U          &kp I      &kp O    &kp P          &mt END HOME
 &kp LSHIFT           &kp A  &kp S  &kp D     &kp F      &kp G    &kp H        &kp J          &kp K      &kp L    &kp SEMICOLON  &kp SINGLE_QUOTE
 &kp LCTRL            &kp Z  &kp X  &kp C     &kp V      &kp B    &kp N        &kp M          &kp COMMA  &kp DOT  &kp FSLH       &shift_capsword_tapdance
                                    &kp LGUI  &kp SPACE  &mo 2    &lt 1 ENTER  &kp BACKSPACE  &kp TAB
