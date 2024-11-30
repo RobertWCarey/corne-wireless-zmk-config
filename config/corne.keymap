@@ -10,47 +10,6 @@
 
 / {
     behaviors {
-        kp_kp_200: kp_kp_200 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "KP_KP_200";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        shift_ctrl_tapdance: shift_ctrl_tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_CTRL_TAPDANCE";
-            #binding-cells = <0>;
-            bindings = <&kp RSHFT>, <&kp RCTRL>;
-        };
-
-        mo_kp_200: mo_kp_200 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_KP_200";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        layer_alt_tapdance: layer_alt_tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_ALT_TAPDANCE";
-            #binding-cells = <0>;
-            bindings = <&mo 2>, <&kp LEFT_ALT>;
-        };
-
-        shift_capsword_tapdance: shift_capsword_tapdance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_CAPSWORD_TAPDANCE";
-            #binding-cells = <0>;
-            bindings = <&kp RSHFT>, <&caps_word>;
-        };
-
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
