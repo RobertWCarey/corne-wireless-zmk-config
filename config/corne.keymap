@@ -87,10 +87,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &bt BT_CLR    &kp NUMBER_7  &kp NUMBER_8  &kp N9        &bt BT_NXT         &kp TILDE  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp GRAVE  &mt END HOME  &trans
-&trans  &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &bt BT_PRV         &kp LEFT   &kp DOWN           &kp UP            &kp RIGHT  &trans        &trans
-&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PRINTSCREEN    &trans     &trans             &trans            &trans     &trans        &trans
-                                    &trans        &trans        &kp LGUI           &trans     &trans             &trans
+&trans  &mt END HOME  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &bt BT_NXT         &kp TILDE  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp GRAVE  &kp DEL   &trans
+&trans  &trans        &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &bt BT_PRV         &kp LEFT   &kp DOWN           &kp UP            &kp RIGHT  &trans    &trans
+&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PRINTSCREEN    &trans     &trans             &trans            &trans     &trans    &trans
+                                    &trans        &trans        &kp LGUI           &trans     &trans             &bt BT_CLR
             >;
         };
 
